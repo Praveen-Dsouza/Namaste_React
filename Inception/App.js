@@ -31,14 +31,14 @@ const parent = React.createElement("div", {id: "parent"},[
 
 console.log('parent', parent);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("header"));
 root.render(parent); 
 
 // Created h1 tag will `hello world from react`
 const heading = React.createElement(
-    "h1", 
-    { id: "heading", xyz: "abc"}, 
-    "Hello World from React!"
+    "h1",                           // tag
+    { id: "heading", xyz: "abc"},   // attributes
+    "Hello World from React!"       //children
 );
 
 console.log('heading', heading); // react element return object
