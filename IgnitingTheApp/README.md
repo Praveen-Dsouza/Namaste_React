@@ -20,3 +20,6 @@ Dev Build Command: npx parcel index.html
 Prod Build Command: npx parcel build index.html (remove "main" from package.json)
 
 Documentation Link: https://parceljs.org/
+
+# Browswerlist
+Link: https://browserslist.dev/
