@@ -1,24 +1,10 @@
-/**
- * 
- * <div id="parent">
- *      <div id="child">
- *          <h1>I'm h1 tag</h1>
- *          <h2>I'm h2 tag</h2>
- *      </div>
- *      <div id="child2">
- *          <h1>I'm h1 tag</h1>
- *          <h2>I'm h2 tag</h2>
- *      </div>
- * </div>
- * 
- * ReactElement(Object) => HTML(Browser Understands)
- * 
- */
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const parent = React.createElement("div", {id: "parent"},[
         React.createElement("div", {id: "child"}, [
-                React.createElement("h1", {}, "I'm h1 tag"), 
-                React.createElement("h2", {}, "I'm h2 tag")
+                React.createElement("h1", {}, "This is Namaste React"), 
+                React.createElement("h2", {}, "This is Awesome!")
             ]
         ),
         React.createElement("div", {id: "child2"}, [
@@ -29,25 +15,7 @@ const parent = React.createElement("div", {id: "parent"},[
     ]
 );
 
-console.log('parent', parent);
+console.log(parent); // object
 
-const root = ReactDOM.createRoot(document.getElementById("header"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent); 
-
-// Created h1 tag will `hello world from react`
-const heading = React.createElement(
-    "h1",                           // tag
-    { id: "heading", xyz: "abc"},   // attributes
-    "Hello World from React!"       //children
-);
-
-console.log('heading', heading); // react element return object
-
-// // Create root, Root is the place where all react code will run.
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// // Everything will be rendered in the root.
-// root.render(heading);
-
-// .render = take the heading object create an h1 teg 
-// that browser will understand and put that up inside the root
