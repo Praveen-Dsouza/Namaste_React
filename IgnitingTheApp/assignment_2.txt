@@ -1,4 +1,88 @@
 # Assignment-2:
 ## Ingniting the App:
 
+1) What is 'NPM'?
+It World largest software registry you can download any public software packages,Its also known as 
+"Ninja Pumpkin Mutants", "Nonprofit Pizza Makers", "Node Package Manager" is not the official name.
 
+2) What is 'Parcel/Webpack'? Why do we need it?
+Parcel are the bundlers mostly used for minification, clean up and make compact code. It eliminates 
+unnecessary comments, new lines, any kind of block delimiters, and white spaces while the functionality 
+of the code remains unchanged.
+
+3) What is '.parcel-cache'?
+parcel-cache in parcel stores information about your project when parcel builds it, so that when it 
+rebuilds, it doesn't have to re-parse and re-analyze everything from scratch. It's a key reason why 
+parcel can be so fast in development mode.
+
+4) What is 'npx'?
+It Stands for 'Node Package execute'.It is simply an NPM package runner. It allows developers to 
+execute any Javascript Package available on the NPM registry without even installing it. NPX is installed 
+automatically with NPM version 5.2.0 and above.
+
+5) What is the difference between 'dependencies' and 'devDependencies'?
+'Dependency' is a library that a project needs to function effectively. 'DevDependencies' are the 
+packages a developer needs during development.
+
+6) What is Tree Shaking?
+In production builds, Parcel statically analyzes the imports and exports of each module, and removes everything 
+that isn't used. This is called "tree shaking" or "dead code elimination". 
+
+7) What is HMR(Hot Module Replacement)?
+Hot Module Replacement is a feature that enables you to see code changes in the browser without having to 
+refresh it, allowing you to preserve the state of your front-end application. 
+
+8) List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words?
+1. Image Optimization - Supports resizing, converting, and optimizing images! Just pass query parameters for 
+                        the format and size you need when referencing the image file in your HTML, CSS, JS, etc. 
+                        and Parcel will take care of the conversion and optimization process.
+2. Minification - Minifiers for JS, CSS, HTML and SVG out of the box. Using cmd: 'parcel build index.html' and
+                  whole application will be built and Optimized.
+3. Compression - Supports compressing bundles using 'Gzip' and 'Brotli'. While many servers compress data on 
+                 the fly, others require you to upload pre-compressed payloads ahead of time. This may also 
+                 allow for better compression, which would be too slow to do on every network request.
+4. Diagnostic - Display error in termainl and browser. Points to the exact location where error occured, with 
+                hints to fix it along with Documentation links.
+5. Content Hashing - Perform content hashing in the names of output files, which enables long-term browser caching.
+                 Whenever content of bundles changes, the hash including the filename get updated, triggering 
+                 invalidation of CDN and browser caches.
+                 By default, all bundles include a content hash except entries and certain dependency types that 
+                 require names to be stable.
+6. Code Splliting - Contains common modules which are reduplicated into separate bundles, This allows to load file 
+                    parallel with app code and cached separately in the browser.
+                    Code splitting is also supported for CSS. If you import CSS from your JavaScript, a sibling 
+                    CSS bundle will be produced and loaded in parallel with the JS bundle.
+7. Lazy dev builds - In development parcel defers to build file until requested in the browser. This means you only 
+                    need to wait for the page you're actually working on to build! If your project has many entries 
+                    or code split points, this can massively reduce dev server startup time.
+
+9) What is '.gitignore'? What should we add and not into it?
+The 'gitignore' contains folder/files which we don't need to be in the repo, since it would create larger file size. 
+It contains the folder/files that can be recreated by the server.
+
+10) What is the difference between 'package.json' and 'package-lock.json'?
+'package.json' a configuration for npm keeps a track of the approx version of package is installed into our system can have using ^ or ~.
+'package-lock.json keeps a track of the exact version of all the dependencies that has been installed.
+
+11) Why should I not modify 'package-lock.json'?
+Modifying 'package-lock.json' could break the synchronization between 'package.json' and 'package-lock.json',It 
+could break the app.
+
+12) What is 'node_modules'? Is it good idea to push that on git?
+'node_modules' contains all the npm packages that has been fetched required for our system. It basically is 
+a collection of dependencies.It kind of a database that has all our packages, files, code, and dependencies.
+No, The file size increases due to node_modules, The modules can be recreated via package.json so any modules that 
+can be recreated is put into gitignore.
+
+13) What is 'dist' folder?
+The 'dist' folder contains the minimized version of the source code. The code present in the 'dist' folder is 
+actually the code which is used on production web applications.
+
+14) What is 'browserslist'?
+It can specify what versions of browsers the app will definitely support; it's not that it won’t support 
+others but may or may not support.
+
+=> caret(^) = install any minor version updates automatically,  
+=> tildae(~) = install major version updates automatically.
+
+Read about vite, webpack and parcel 
