@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // React Element
-// const jsxHeading = (
-//   <h1 className="head" tabIndex="5">
-//     Namaste Javascript using JSX
-//   </h1>
-// );
+const jsxHeading = (
+  <h1 className="head" tabIndex="5">
+    Namaste Javascript using JSX
+  </h1>
+);
 
 // React Component
 const Title = function () { 
@@ -17,9 +17,12 @@ const Title = function () {
     );
 }
 
+
 const HeadingComponent = () => (
   <div id="container">
-    <Title />
+    {/* <Title /> */}
+    { jsxHeading }
+    <h2>{ 100 + 200 }</h2>
     <h1 className="heading">Namaste React Functional Component</h1>
   </div>
 );
