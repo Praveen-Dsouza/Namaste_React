@@ -1,3 +1,4 @@
+<!-- Ep 02 -->
 # Parcel
 - Dev Build
 - Local Server
@@ -16,14 +17,14 @@
 - Tree Shaking - Remove Unused Code
 - Different dev and prod bundles
 
+<!-- Note -->
 Dev Build Command: npx parcel index.html
 Prod Build Command: npx parcel build index.html (remove "main" from package.json)
 
-Documentation Link: https://parceljs.org/
+# Parcel: https://parceljs.org/
+# Browswerlist: https://browserslist.dev/
 
-# Browswerlist
-Link: https://browserslist.dev/
-
+<!-- Ep 03 -->
 # Babel: https://babeljs.io/
 # Attribute Type: https://developer.morzilla.org/en-US/docs/Web/HTML/Element/script#attr-type
 # JS Modules: https://developer.morzilla.org/en-US/docs/Web/JavaScript/Guide/Modules
