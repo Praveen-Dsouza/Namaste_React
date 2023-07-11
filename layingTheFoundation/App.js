@@ -17,16 +17,15 @@ const Title = function () {
     );
 }
 
-// const data = api.getData();
-
+// React Fragment - behaves like an empty tag
 const HeadingComponent = () => (
-  <div id="container">
-    { Title() }
-    <Title />
-    <Title></Title>
-    { jsxHeading }
-    <h1 className="heading">Namaste React Functional Component</h1>
-  </div>
+    <>
+        <div id="container">
+            <Title />
+            <h1 className="heading">Namaste React Functional Component</h1>
+        </div>
+        <div id="container-2"></div>
+    </>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
