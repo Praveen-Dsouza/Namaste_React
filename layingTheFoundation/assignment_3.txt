@@ -1,3 +1,20 @@
 # Assignment-3:
 ## Laying the Foundation:
 
+1) What is JSX?
+Stands for JavaScript XML, We can write HTML and JS within it. It's not a part of react and neither pure JS. JSX 
+is not HTML inside JS, It is HTML or XML-like Syntax. Babel transpiles JSX before reaching JS Engine.
+
+2) Superpowers of JSX?
+It converts HTML tags into React Elements.
+Code Readability.
+JSX automatically sanitizes malicious data.
+JSX can have single parent on the root.
+Can use JSX Fragments (<></>) to wrap all child elements, Fragment behaves like empty tag.
+
+3) Role of type attribute in script tag? What options can I use there?
+Attributes of JSX are camelcase. To write JSX into multiple lines we wrap with (). We use className instead 
+of class, tabindex => tabIndex
+
+4) {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>}
+All are ways to render the title Component.
