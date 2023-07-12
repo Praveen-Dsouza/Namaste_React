@@ -1,0 +1,48 @@
+# Assignment-4:
+## Talk is Cheap, Show me the Code:
+
+1) Is JSX mandatory for React?
+JSX is not mandatory for React, but is recommended way and most commonly used syntax for writing code.
+
+2) Is ES6 mandatory for React?
+- ES6 is not mandatory for react, but is highly recommended and commonly used while developing react applications.React in itself is build using javascript features and syntax which are part of ES6 specifications and later versions.
+- ES6 enabled several powerful features to javascript that significantly imroves the development experience.
+- some of them are arrow functions, template literals, classes, destructuring assignment,spread syntax.
+- It is worth noting that while working with react, we use Babel(Javascript compiler(or)transpiler) and parcel(bundler) which are build using ES6.
+
+3) {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>}
+All are ways to render the title Component.
+
+4) How can I write comments in JSX?
+{/**/}
+
+5) What is <React.Fragment></React.Fragment> and <></>?
+React Fragment is the Single Parent in the JSX. It behaves like an empty tag. <React.Fragment></React.Fragment> is same as <></>
+
+6) What is Virtual Dom?
+The Virtual DOM is an in-memory representation or copy of the actual DOM structure. It is a JavaScript object 
+that reflects the structure and properties of the real DOM elements in your web page.When you make changes to 
+your React components, instead of directly updating the real DOM, React updates the Virtual DOM first.
+
+7) What is Reconcilation in React?
+It is the process of comparing the new copy of virtual DOM with the previous version to identify the changes or 
+updation that are needed to be done to the actual DOM.It optimizes and improves the performance of the UI updates 
+and reduces the actual DOM manipulations.(diffing).
+
+8) What is React Fiber?
+- React fiber divides the work of rendering and updation process, by breaking the components into smaller, managable units.
+- Dividing work: While making changes to the react components, react fiber breaks the work into smaller units known as "fiber".
+  Each fiber is a part of the component tree, which can be worked on independently.
+
+9) Why do we need keys in React? When do we need keys in React?
+To uniquely identify each data passed to the component, if keys are not passed and new item gets added to our list it will re render all the components, which leads to performance issues when huge data is processed.
+
+10) Can we use index as keys in React?
+Yes, We can use index as key if there does not exists unique id for the Object data, it not a recommended practice.
+
+11) What are props in React?
+Ways to pass data to the component.
+
+12) What is Config Driven UI?
+Websites are driven by config data, config data comes from backend.
+Suppose that we have a website example swiggy so it shows data based on location that data that has the location= “name” will be shown this is config driven UI.
