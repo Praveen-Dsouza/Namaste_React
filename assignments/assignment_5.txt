@@ -1,3 +1,47 @@
 # Assignment-5:
 ## Lets Get Hooked:
 
+1) What is Virtual Dom?
+The Virtual DOM is an in-memory representation or copy of the actual DOM structure. It is a JavaScript object 
+that reflects the structure and properties of the real DOM elements in your web page.When you make changes to 
+your React components, instead of directly updating the real DOM, React updates the Virtual DOM first.
+
+2) What is Reconcilation in React?
+It is the process of comparing the new copy of virtual DOM with the previous version to identify the changes or 
+updation that are needed to be done to the actual DOM.It optimizes and improves the performance of the UI updates 
+and reduces the actual DOM manipulations.(diffing).
+
+3) What is React Fiber?
+- React fiber divides the work of rendering and updation process, by breaking the components into smaller, managable units.
+- Dividing work: While making changes to the react components, react fiber breaks the work into smaller units known as "fiber".
+  Each fiber is a part of the component tree, which can be worked on independently.
+
+4) What is the difference between Named Export, Default Export and * as export?
+In a single file we can have only one "default export".
+- export default Component;
+- import Component from “path”;
+
+When I want to export multiple Components from same file we can use "named export".
+- export const Component;
+- import { Component } from “path”;
+
+When we want to import all the Component as a single Object we use "* export".
+- export const Component
+- import * as ObjectName from "path"
+
+Note: Named and * export are Same, named exports can be imported individually and * exports as an Object of names.
+
+5) What is the importance of config.js file?
+It is a Configuration file where we define our URLs, Auth_Token etc.
+
+6) What are react Hooks?
+A normal JS utility function.
+
+7) Why do we need a useState Hook?
+- To make a State Variable, It Maintains the state of the component, When we pass default value to useState.
+- It basically is used to manipulate Virtual Dom when any Dom level operations are perfomed.
+- It used "Reconciliation Algorithm" aka "React Fiber", basically it compared "Previous Virtual Dom" with "Updated Virtual Dom".
+- The Comparison is done using Diff Algorithm.
+- Virtual DOM is the representation of actual DOM. Virtual DOM is a Normal JS Object. Virtual DOM uses Diff Algorithm.
+- Virtual DOM is an JS Object, It basically compares between Previous Object aka "Previous Virtual DOM" and Updated Object aka "Updated Virtual DOM".
+  i.e why it rerenders fast since it compares the Object.
