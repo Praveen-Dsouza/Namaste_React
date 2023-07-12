@@ -32,6 +32,25 @@ Prod Build Command: npx parcel build index.html (remove "main" from package.json
 # React without JSX: https://reactjs.org/docs/react-without-jsx.html
 
 <!-- Ep 04 -->
+
+/**
+ * 
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search
+ * - RestaurantContainer
+ *  - RestaurantCard
+ *      - Img
+ *      - Name of Res, Star Rating, cuisine, delivery time
+ * Footer
+ * - Links
+ * - Address
+ * - Contact
+ * 
+ */
+
 # Code Link: https://bitbucket.org/namastedev/namaste-react-live/src/master/
 # React without JSX: https://reactjs.org/docs/react-without-jsx.html
 # Virtual DOM: https://reactjs.org/docs/faq-internals.html
@@ -39,3 +58,16 @@ Prod Build Command: npx parcel build index.html (remove "main" from package.json
 # React Fiber Architecture: https://github.com/acdlite/react-fiber-architecture
 # React Without ES6: https://reactjs.org/docs/react-without-es6.html
 # Index Keys as Anti-Pattern: https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/
+
+<!-- Ep 05 -->
+Two Types of Export/Import
+
+- Default Export/Import
+
+export default Component;
+import Component from "path";
+
+- Named Export/Import
+
+export const Component;
+import { Component } from "path";
