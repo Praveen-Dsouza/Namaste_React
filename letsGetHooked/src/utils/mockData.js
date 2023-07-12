@@ -1,4 +1,4 @@
-const reslist = [
+const resList = [
     {
     "type": "restaurant",
     "data": {
@@ -1582,4 +1582,4 @@ const reslist = [
     }
 ]
 
-export default reslist
+export default resList
