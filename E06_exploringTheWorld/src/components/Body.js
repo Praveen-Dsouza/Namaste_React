@@ -19,11 +19,9 @@ const Body = () => {
         setListOfRestuarants(json?.data?.cards[2]?.data?.data?.cards)
     }
 
-    if (listOfRestuarants.length === 0) {
-        return <Shimmer/>
-    }
+    // Conditional Rendering
 
-    return (
+    return listOfRestuarants.length === 0 ? <Shimmer/>: (
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {

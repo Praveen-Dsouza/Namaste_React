@@ -29,7 +29,7 @@
 }
 
 .res-card {
-    margin: 5px;
+    margin: 19px;
     width: 200px;
     padding: 5px;
 }
@@ -62,4 +62,9 @@
     width: 200px;
     height: 400px;
     background-color: #f0f0f0;
+}
+
+.login-btn {
+    padding: 0 20px;
+    cursor: pointer;
 }
