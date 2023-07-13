@@ -1,15 +1,27 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
-import resList from "../utils/mockData";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
 
     // State Variable - Super powerful variable
-    const [listOfRestuarants, setListOfRestuarants] = useState(resList);
+    const [listOfRestuarants, setListOfRestuarants] = useState([]);
     const [query, setQuery] = useState("");
 
-    // Normal JS Variable                State Variable
-    // let listOfRestuarants = [] equals setListOfRestuarants([])
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json.data.cards[2].data.data.cards)
+        setListOfRestuarants(json?.data?.cards[2]?.data?.data?.cards)
+    }
+
+    if (listOfRestuarants.length === 0) {
+        return <Shimmer/>
+    }
 
     return (
         <div className="body">
@@ -22,7 +34,7 @@ const Body = () => {
                 }}>Top Rated Restaurants</button>
             </div>
             <div className="search">
-                <input type="text" placeholder="search your resturant" onChange={(e) => setQuery(e.target.value)} />
+                <input type="text" placeholder="search your resturant..." onChange={(e) => setQuery(e.target.value)} />
             </div>
             
             <div className="res-container">
@@ -30,7 +42,8 @@ const Body = () => {
                     .filter(res => {
                         if (query === '') {
                             return listOfRestuarants;
-                        } else if (res.data.name.toLowerCase().includes(query.toLowerCase())) {
+                        } else if (res.data?.name.toLowerCase().includes(query.toLowerCase())) {
+                            console.log(res.data)
                             return listOfRestuarants;
                         }
                     })
