@@ -47,6 +47,11 @@
     width: 100%;
 }
 
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .filter-btn {
     margin: 10px;
     cursor: pointer;
