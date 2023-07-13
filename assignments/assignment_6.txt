@@ -1,3 +1,73 @@
 # Assignment-6:
 ## Exploring The World:
 
+1) What is a MicroService?
+When each module has it different service, and all this services are brought together to form a larger 
+application. They are loosely coupled.
+
+2) What is a Monolith architecture?
+When multiple modules are in single codebase to form larger application. They are tightly coupled and it becomes 
+difficult to manage as the codebase becomes larger.
+
+3) What is the difference between Monolith and MicroService?
+- Monolithic applications typically consist of a client-side UI, a database, and a server-side application. 
+  Developers build all of these modules on a single code base.
+- MicroService has a distributed architecture, each microservice works to accomplish a single feature or 
+  business logic. Instead of exchanging data within the same code base, microservices communicate with an API.
+
+4) Why do we need useEffect Hook?
+- It is called after the component is rendered.
+- It performs a rendering of data eg from API when the component is loaded first time/reloaded in the application.
+- It has a callback function as first argument and dependency array second argument. The callback function will be called as soon as the component is rendered.
+- The Dependency array is Optional.
+
+5) What is Optional Chaining?
+Optional Chaining access an object property or calls function.If the object accessed or function called 
+using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+
+6) What is Shimmer UI?
+When the App is loading it renders the component the component may have API call so to handle the 
+loading time a fake UI is created similar to page data.
+
+7) What is difference between JS expression and JS statement?
+The major difference lies in Hoisting.
+Code:
+a() "Hello A"
+b() // TypeError
+
+// Function Expression
+function a() {
+    console.log("Hello A");
+}
+
+// Function Statement
+var B = function () {
+    console.log("Hello B)
+}
+
+Here during memory creation phase a = fn() and b = undefined, So when fn is invoked b is still undefined.
+
+8) What is Conditional Rendering, explain with a code example?
+Conditional Rendering is rendering a component based on a condition else set a default, used to handle error in page.
+
+Code:
+// Data from API stored in listData
+if (listData.length === 0) {
+    return "Loading..." or <Shimmer/>
+}
+render component
+
+9) What is CORS?
+CORS is HTTP header based mechanism that allows server to indicate any origins(domain, scheme or port) 
+other than it own from which a browser should permit loading access. If two browsers have different ports 
+they follow CORS mechanism.Before CORS a preflight aka Options call is made, so if A snd B are applications
+A sends -> preflight/Options call -> B
+A <- B sends additonal hhtps headers
+A can request -> B 
+
+10) What is async and await?
+It is cleaner way of writing promises.
+
+11) What is the use of `const json = await data.json();` in getRestaurants
+It takes a response stream and reads it to completion. It returns a promise with the result of parsing body text json.
+The result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.
