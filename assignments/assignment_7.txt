@@ -2,12 +2,40 @@
 ## Finding The Path:
 
 1) What are various ways to add images into our App? Explain with code examples?
+- The first way to add images in our app using `CDN link`.
+## Example:
+``` javascript
+ <img src = "https://tse4.mm.bing.net/th?id=OIP.1d6tBbNiJTFQNEK_k0sSjQHaFj&pid=Api&P=0"/>
+```
+- The second way to add images in our app using `import`.
+## Example:
+``` javascript
+import {logo} from ".Images/logo.png";
+
+function Header(){
+  return(
+    <>
+    <img src = {logo} />
+    </>
+  )
+}
+```
+firstly, In this we will store our image in any folder and then we will import that images via folder structure.
+The good way of structuring of image folder is "assets/Images/logo.png"
 
 2) What would happen if we do console.log(useState())?
+useState() returns an array with exactly two values: The current state. During the first render, 
+it will match the initialState you have passed. The set function that lets you update the state 
+to a different value and trigger a re-render.
+[value, fn() ], value => undefined => default value not provided
 
 3) How will useEffect() behave if we don't add a dependency array?
+If there is  dependency array not present then useEffect() hook will be called for every time the component renders.
 
 4) What is SPA?
+A SPA loads all the app component at once as a Single web document, and update the body content via JS such as fetch(), 
+i.e. allows web site to load without any network call to the server.
 
 5) What is the difference between Client Side Routing and Server Side Routing?
-
+Client Side Routing: When we load a component without any network/API call because all the components are already loaded into app.
+Server Side Routing: When we load a component with an network/API call to the server to fetch the page/data and render it on UI, and the whole page is refreshed.
