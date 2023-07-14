@@ -81,6 +81,10 @@ Normal JS utility functions
 <!-- Ep 06 -->
 
 <!-- Ep 07 -->
+# 2 types of routing in web apps
+- Client Side Routing aka SPA: When we don't make a network/API call and loads the component.
+- Server Side Routing: We make a network and page comes from server, renders it on UI and reloads the page.
+
 # React Router DOM - https://reactrouter.com/en/main
 # Client Side Routing - https://reactrouter.com/en/main/start/overview 
 # Formik - https://formik.org/
