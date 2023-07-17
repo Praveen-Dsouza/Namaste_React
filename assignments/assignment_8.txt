@@ -1,16 +1,100 @@
 # Assignment-8:
 ## Lets Get Classy:
 
-1) How do you create Nested Routes react-router-dom cofiguration?
+1) How do you create Nested Routes react-router-dom configuration?
+We can create nested routes using children array.
 
-2) Read abt createHashRouter, createMemoryRouter from React Router docs?
+Code: 
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout/>,
+        children: [
+            {
+                path: "/",
+                element: <Body/>
+            },
+        ],
+    },
+])
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<RouterProvider router={appRouter} />);
+
+2) Read about createHashRouter, createMemoryRouter from React Router docs?
+createHashRouter():
+- This router is useful if you are unable to configure your web server to direct all traffic to your React Router application. 
+- Instead of using normal URLs, it will use the hash (#) portion of the URL to manage the "application URL".
+
+createMemoryRouter():
+- Instead of using the browser's history, a memory router manages its own history stack in memory. 
+- It's primarily useful for testing and component development tools like Storybook, but can also be used for 
+  running React Router in any non-browser environment.
+
 
 3) What is the order of life cycle method calls in Class Based Components?
+/**
+ *
+ * ------- MOUNTING ---------
+ * Constructor (dummy)
+ * Render (dummy)
+ *     <HTML Dummy>
+ * ComponentDidMount
+ *   - <API Call>
+ *   - <this.setState>
+ *
+ * ------- UPDATING --------
+ *      render (API data)
+ *      <HTML (new API data)>
+ * ComponentDidUpdate
+ *
+ * -------------------------
+ * ComponentWillUnmount
+ *      - Component removed from DOM
+ *
+ */
 
 4) Why do we use component DidMount?
+To make API calls. So in React we want to render the component quickly then make API calls to fill the data. 
+So componentDidMount() serve the purpose of make API calls after the component is rendered.
 
 5) Why do we use componentWillUnmount? Show with example
+To prevent Memory Leaks. So that an when have a function to perform in sn component and we route to another component.
+It should stop rendering.
+Class Based Component:
+componentDidMount() {
+    this.timer = setInterval(() => {
+      console.log("Component Did Mount");
+    }, 1000);
+  }
+componentWillUnmount() {
+    clearInterval(this.timer);
+    console.log("Component Will Unmount");
+  }
+
+Functional Based Component:
+useEffect(() => {
+        // API Call
+        console.log("useEffect");
+        const timer = setInterval(() => {
+            console.log("Namaste React OP");
+          }, 1000);
+        /** Function is called when unmounting the component */
+        return() => {
+            clearInterval(timer);
+            console.log("useEffect Return");
+        }
+    }, [])
+
 
 6) (Research) Why do we use super(props) in constructor?
+This allows us to access this.props in constructor. The super() function calls the Parent class’s constructor i.e  React.Component.
+super() is the reference to the parent class constructor. If we use super(props) we can call this.props anywhere in the component
+without having to pass props on the methods/functions.
 
 7) (Research) Why can't we have the callback function of useEffect async?
+There are two reasons:
+- async functions implicitly returns a promise.
+- useEffect expects it callback to either return nothing or a clean up function.
+Using async will cause a bug as clean up function will never get called.
