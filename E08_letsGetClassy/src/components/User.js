@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const User = ({name}) => {
     const [count, setCount] = useState(0);
     const [count2] = useState(1);
+
+    useEffect(() => {
+        // API Call
+        // cossole.log("useEffect");
+    }, [count])
+
+    useEffect(() => {
+        // API Call
+        // cossole.log("useEffect");
+    }, [count2])
     
     return (
         <div className="user-card">
