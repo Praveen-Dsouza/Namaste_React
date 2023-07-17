@@ -90,5 +90,25 @@ Normal JS utility functions
 # Formik - https://formik.org/
 
 <!-- Ep 08 -->
+/**
+ * 
+ * Parent Constructor
+ * Parent Render
+ * 
+ *  - Child1 Constructor
+ *  - Child1 Render
+ * 
+ *  - Child2 Constructor
+ *  - Child2 Render
+ * 
+ * <DOM UPDATED - IN SINGLE BATCH>
+ * 
+ *  - Child1 ComponentDidMount
+ *  - Child2 ComponentDidMount
+ * 
+ * Parent ComponentDidMount
+ * 
+ */
+
 # React Life Cycle Method Diagram - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 # Code Link - https://bitbucket.org/namastedev/namaste-react-live/src/master/

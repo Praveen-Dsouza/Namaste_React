@@ -5,32 +5,44 @@ class UserClass extends React.Component {
         super(props);
 
         this.state = {
-            count: 0,
-            count2: 1
+            userInfo: {
+                name: "Dummy name",
+                location: "Default Loaction",
+                avatar_url: "http://dummy-photo.com"
+            }
         }
-        console.log(this.props.name + "Child Constructor");
+        // console.log(this.props.name + "Child Constructor");
     }
 
-    componentDidMount() {
-        console.log(this.props.name + "Child Component Did Mount");
+    async componentDidMount() {
+        // console.log(this.props.name + "Child Component Did Mount");
+
+        const data = await fetch("https://api.github.com/users/Praveen-Dsouza");
+        const json = await data.json();
+        
+        this.setState({
+            userInfo: json
+        })
+
+        console.log(json)
+    }
+
+    componentDidUpdate() {
+        console.log("Component Did Update");
+    }
+
+    componentWillUnmount() {
+        console.log("Component Will Unmount");
     }
 
     render() {
-        const { name, location } = this.props
-        let { count, count2 } = this.state
+        // console.log(this.props.name + "Child Render");
 
-        console.log(this.props.name + "Child Render");
+        const { name, location } = this.state.userInfo;
 
         return (
             <div className="user-card">
-                <h1>Count = {count}</h1>
-                <h1>Count2 = {count2}</h1>
-                <button onClick={() => {
-                    this.setState({
-                        count: this.state.count + 1,
-                        count2: this.state.count2 + 1
-                    })
-                }}>Count Increase</button>
+                <img src="https://avatars.githubusercontent.com/u/96222453?v=4"/>
                 <h2>Name: {name}</h2>
                 <h2>Location: {location}</h2>
                 <h2>Contact: dsouzapraveen24</h2>
@@ -38,5 +50,26 @@ class UserClass extends React.Component {
         )
     }
 }
+
+/**
+ * 
+ * ------- MOUNTING ---------
+ * Constructor (dummy)
+ * Render (dummy)
+ *     <HTML Dummy>
+ * ComponentDidMount
+ *   - <API Call>
+ *   - <this.setState>
+ * 
+ * ------- UPDATING --------
+ *      render (API data)
+ *      <HTML (new API data)>
+ * ComponentDidUpdate
+ *   
+ * -------------------------
+ * ComponentWillUnmount
+ *      - Component removed from DOM
+ * 
+ */
 
 export default UserClass;
