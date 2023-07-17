@@ -2,12 +2,33 @@
 ## Optimising Our App:
 
 1) When and why do we need lazy()?
+- When we want to load a chunk or module of a app separately as a different bundle to optimize our app loading time is known as lazy loading.
+- Lazy loading makes the large scale application load fast, performant, light weight.
+- We import the lazy() function from react library, lazy() takes a callback function and that callback takes an import and it basically takes the path of the component.
 
 2) What is suspense?
+- It is a react component given by react library. 
+- It will wrap the component that we want to lazy load
+- we give a placeholder to fallback so that when react render the component and if the component code is not available, it will display the placeholder passed via fallback. 
+- We can pass JSX or a component in fallback.
 
 3) Why we got this error : A component suspended while responding to synchronous input. This will cause the UI to be replaced
 with a loading indicator. To fix, updates that suspend should be wrapped with startTransition? How does suspense fix this error?
+Suspense fix this by showing a placeholder text or component until the code is not loaded.
 
 4) Advantages and disadvantages of using this code splitting pattern?
+- Faster Loading time
+- Light weight application
+- Reduced Intial Bundle Size
+- Better Caching and Caching Efficiency
+- Optimized Resouce Utilization
+
+Disadvantages:
+- Increase Complexity
+- Network Round Trips
+- Dependencies and Interoperability
+- Build Time Overhead
 
 5) When do we and why do we need suspense?
+We need suspense so that when the component code is not loaded, we show a placeholder text or component passed 
+to fallback.
