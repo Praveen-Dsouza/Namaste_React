@@ -6,12 +6,21 @@ const User = ({name}) => {
 
     useEffect(() => {
         // API Call
-        // cossole.log("useEffect");
-    }, [count])
+        console.log("useEffect");
+        const timer = setInterval(() => {
+            console.log("Namaste React OP");
+          }, 1000);
+
+        /** Function is called when unmounting the component */
+        return() => {
+            clearInterval(timer);
+            console.log("useEffect Return");
+        }
+    }, [])
 
     useEffect(() => {
         // API Call
-        // cossole.log("useEffect");
+        // console.log("useEffect");
     }, [count2])
     
     return (
