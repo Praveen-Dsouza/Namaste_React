@@ -1,0 +1,10 @@
+# Assignment-9:
+## Data Is The New Oil:
+
+1) What is prop drilling?
+
+2) What is lifting the state up?
+
+3) What are Context Provider and Context Consumer?
+
+4) If you don't pass a value to the provider does it take the default value?
