@@ -2,9 +2,16 @@
 ## Data Is The New Oil:
 
 1) What is prop drilling?
+When we want to pass a piece of data from parent to child component which are nested, i need to pass through all the child 
+components the data and then it will reach the nested child component. Props drilling can be avoided using Context, Redux.
 
 2) What is lifting the state up?
+- When the parent component has the state management of the child component. 
+- We pass the state via props from parent to child.
 
 3) What are Context Provider and Context Consumer?
+Context Provider - We can pass the data throught our app or a component by wrapping within it.
+Context Consumer - It is used is class based component to get the data by the provider by wrapping a callback function within it.
 
 4) If you don't pass a value to the provider does it take the default value?
+Yes, It will take the default value from the context passed by provider.
