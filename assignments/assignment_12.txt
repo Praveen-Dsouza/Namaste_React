@@ -1,0 +1,16 @@
+# Assignment-12:
+## Lets Build Our Store:
+
+1) useContext vs Redux?
+
+2) Advantages of using Redux Toolkit over Redux?
+
+3) Explain Dispatcher?
+
+4) Explain Reducer?
+
+5) Explain slice?
+
+6) Explain selector?
+
+7) Explain createSlice and the configuration it takes?
