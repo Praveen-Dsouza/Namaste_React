@@ -140,3 +140,6 @@ Normal JS utility functions
 - Slice (cartSlice)
 - dispatch(action)
 - Selector
+
+# Redux ToolKit - https://redux-toolkit.js.org/
+# RTK Query - https://redux-toolkit.js.org/rtk-query/overview

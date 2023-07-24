@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -7,14 +7,23 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      // mutating the state
+      // Redux Toolkit => We have to mutate the state
+      // Redux Toolkit uses Immer BTS
       state.items.push(action.payload);
     },
     removeItem: (state) => {
       state.items.pop();
     },
+    // originalState = ["pizza"]
     clearCart: (state) => {
-      state.items.length = 0;
+      console.log(state); // ["pizza"]
+      console.log(current(state));
+      state = [];
+      console.log(state); // [] local state change not originalState=["pizza"]
+
+      // RTK - either Mutate the existing state or return a new State
+      //   state.items.length = 0; // originalState = []
+      return { items: [] }; // this new Object will be replaced inside originalState = []
     },
   },
 });
