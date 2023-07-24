@@ -2,15 +2,46 @@
 ## Lets Build Our Store:
 
 1) useContext vs Redux?
+- Complexity and Features:
+    - Context: Context is a built-in feature in React that allows you to pass data down the component tree without explicitly passing props through every level. It is primarily used for prop drilling and managing global state in simpler applications.
+    - Redux: Redux is a standalone library, separate from React, that provides a more comprehensive state management solution. It follows the principles of a predictable state container and encourages a unidirectional data flow. Redux is more suitable for managing complex application states and provides additional features like middleware, time-travel debugging, and dev tools.
+
+- Use Cases:
+    - Context: Context is best suited for simple and small-scale applications with limited state management requirements. It is ideal when you have a few pieces of shared data that need to be accessible throughout the component tree.
+    - Redux: Redux is more appropriate for large-scale applications with complex state management needs. It is especially useful when dealing with deeply nested components, sharing state across multiple components, or handling asynchronous operations and complex data flows.
+
+- Implementation:
+    - Context: Using Context in React is relatively straightforward and built into the framework. You can create a context using the React.createContext() method and access the context values using Consumer or useContext hook.
+    - Redux: Implementing Redux requires additional setup and involves creating a centralized store, defining actions, reducers, and using a middleware if needed. While Redux introduces more boilerplate code, it offers more fine-grained control over state updates and enables better separation of concerns.
+
+- Community and Ecosystem:
+    - Context: Context is a native feature of React and requires no additional dependencies. It has a simpler API and is easier to grasp for developers new to state management in React.
+    - Redux: Redux has a larger and more mature ecosystem, with a wide range of extensions, middleware, and dev tools. It is widely adopted in the React community and has extensive documentation and support.
 
 2) Advantages of using Redux Toolkit over Redux?
+- RTK simplifies development process, no need of boilerplate code. We only need two libraries rtk and react-redux.
+- RTK uses the "immer" library internally, allowing you to write reducers with mutable code while 
+  still maintaining an immutable state. This simplifies the process of updating the state in reducers.
+- It provides folder structure for actions, reducers and selectors, the code becomes more consisitent 
+  and maintainable.
+- In RTK we have to mutate the state and return Object is not mandatory.
+- Offers easy debugging.
+- In Redux we have do not have to mutate the original state, we need to create a copy of original state and have 
+  to return the new mutated state.
 
 3) Explain Dispatcher?
+Dispatch an action inside reducers in our slice.
 
 4) Explain Reducer?
+It is a large JS Object kept at global central place.
 
 5) Explain slice?
+Slice is a small portion of redux store.
 
 6) Explain selector?
+Used to access the store and store elements.
 
 7) Explain createSlice and the configuration it takes?
+name, 
+initialState
+reducers: contains set of dispatched(action) assigned with reducer function to access store.
