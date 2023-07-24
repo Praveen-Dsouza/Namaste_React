@@ -131,3 +131,12 @@ Normal JS utility functions
 <!-- Ep 11 -->
 # Lifting The State Up - https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example
 # React Context - https://legacy.reactjs.org/docs/context.html
+
+<!-- Ep 12 -->
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to our app
+- Slice (cartSlice)
+- dispatch(action)
+- Selector
