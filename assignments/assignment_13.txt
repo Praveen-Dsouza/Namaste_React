@@ -1,0 +1,11 @@
+# Assignment-13:
+## Time For The Test:
+
+1) What are the different types of testing?
+
+2) What is Enzyme?
+
+3) Enzyme vs React Testing Library?
+
+4) What us Jest and why do we use it?
+
