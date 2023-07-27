@@ -25,7 +25,9 @@ const Body = () => {
     );
     const json = await data.json();
     // Optional Chaining
-    const restaurantData = json?.data?.cards[2]?.data?.data?.cards;
+    const restaurantData =
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
     setListOfRestuarants(restaurantData);
     setFilteredRestaurant(restaurantData);
   };
@@ -42,7 +44,7 @@ const Body = () => {
 
   const { loggedInUser, setUserName } = useContext(UserContext);
 
-  return listOfRestuarants.length === 0 ? (
+  return listOfRestuarants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -61,7 +63,7 @@ const Body = () => {
             className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               const filteredRestaurant = listOfRestuarants.filter((res) =>
-                res.data.name.toLowerCase().includes(searchText.toLowerCase())
+                res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilteredRestaurant(filteredRestaurant);
             }}
@@ -74,7 +76,7 @@ const Body = () => {
             className="px-4 py-2 bg-gray-100 rounded-lg"
             onClick={() => {
               const filteredList = listOfRestuarants.filter(
-                (ele) => ele.data.avgRating > 4
+                (ele) => ele?.info?.avgRating > 4
               );
               setListOfRestuarants(filteredList);
             }}
@@ -93,18 +95,19 @@ const Body = () => {
       </div>
 
       <div className="flex flex-wrap">
-        {filteredRestaurant.map((restaurant) => (
+        {filteredRestaurant?.map((restaurant) => {
+          console.log('res', restaurant.info.id);
           <Link
-            key={restaurant.data.id}
-            to={"/restaurants/" + restaurant.data.id}
+            key={restaurant?.info?.id}
+            to={"/restaurants/" + restaurant?.info?.id}
           >
-            {restaurant.data.promoted ? (
+            {restaurant.info.promoted ? (
               <RestaurantCardPromoted resData={restaurant} />
             ) : (
-              <RestaurantCard resData={restaurant} />
+            <RestaurantCard resData={restaurant} />
             )}
-          </Link>
-        ))}
+          </Link>;
+        })}
       </div>
     </div>
   );
