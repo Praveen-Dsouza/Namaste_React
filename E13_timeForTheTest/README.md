@@ -143,3 +143,16 @@ Normal JS utility functions
 
 # Redux ToolKit - https://redux-toolkit.js.org/
 # RTK Query - https://redux-toolkit.js.org/rtk-query/overview
+
+<!-- Ep 13 -->
+# Types of Testing (devloper)
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e Testing
+
+# Setting up Testing in our app
+- Install React Testing Library
+- Install Jest
+- Install Babel Dependencies (required using jest)
+- Configure Babel
+- Configure Parcel Config File to disable default babel transpilation
