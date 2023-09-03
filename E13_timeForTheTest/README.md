@@ -156,3 +156,5 @@ Normal JS utility functions
 - Install Babel Dependencies (required using jest)
 - Configure Babel
 - Configure Parcel Config File to disable default babel transpilation
+- Jest Configuration -> npx jest --init
+- Install 
