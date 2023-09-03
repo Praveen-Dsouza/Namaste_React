@@ -151,10 +151,13 @@ Normal JS utility functions
 - End to End Testing - e2e Testing
 
 # Setting up Testing in our app
-- Install React Testing Library
-- Install Jest
-- Install Babel Dependencies (required using jest)
-- Configure Babel
-- Configure Parcel Config File to disable default babel transpilation
+- Install React Testing Library -> npm install --save-dev @testing-library/react
+- Install Jest ->  npm install --save-dev jest
+- Install Babel Dependencies (required using jest) -> npm install --save-dev babel-jest @babel/core @babel/preset-env
+- Configure Babel -> babel.config.js
+- Configure Parcel Config File to disable default babel transpilation -> .parcelrc
 - Jest Configuration -> npx jest --init
-- Install 
+- Install jsdom library -> npm install --save-dev jest-environment-jsdom
+- Install @babel/preset-react -> npm i --save-dev @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom -> npm i --save-dev @testing-library/jest-dom
