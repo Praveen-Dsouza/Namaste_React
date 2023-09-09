@@ -2,10 +2,18 @@
 ## Time For The Test:
 
 1) What are the different types of testing?
+- Unit Testing: Testing a single component or and unit of the react app is known as unit testing.
+- Integration Testing: Testing a multiple components that are bind to each other  and testing in a flow of the react app is known as integration testing.
 
 2) What is Enzyme?
+Enzyme is a JS test util library for manipulating and asserting React components, it works with Jest or Karma or Mocha or other test frameworks.
 
 3) Enzyme vs React Testing Library?
+- Enzyme: Enzyme provides access to the state, enabling us to read and set the state and also mock children, which makes tests run faster. With Enzyme we can test the details of implementations of the existing component.
+- React Testing Library: is build on DOM Testing Library. In “create-react-app” RTL is already present in the app. RTL uses Jest behind the scenes.
 
 4) What us Jest and why do we use it?
+- Jest is Delightful Javascript Testing Framework with a Focus of Simplicity.
+- We know Parcel uses Babel Behind the scenes, so when we configured Babel inside our app, Parcel gets confused to use which configuration. So we need to configure parcel.
+
 
