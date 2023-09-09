@@ -35,7 +35,7 @@ it("Should Search Restaurant List for burger text input", async () => {
   expect(cardsAfterSearch.length).toBe(2);
 });
 
-it("Should filter Top Rated Restaurant", async () => {
+it("Should filter Top Rated Restaurants", async () => {
   await act(async () =>
     render(
       <BrowserRouter>
