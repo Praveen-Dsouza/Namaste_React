@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { findPrime } from "../utils/helper";
 
-const Demo = () => {
+const Memo = () => {
   const [text, setText] = useState(0);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
 
@@ -38,4 +38,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default Memo;
